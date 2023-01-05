@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: "2010-09-09"
+
+Description: Creates a CodeCommit repository with approval rules
+
+Parameters:
+  RepoName:
+    Type: String
+    Description: "Name of the Repo"
+
+Resources:
+  rCodeCommit:
+    #DeletionPolicy: Retain
+    Type: AWS::CodeCommit::Repository
+    Properties:
+      RepositoryName: !Sub ${RepoName}
