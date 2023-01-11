@@ -1,6 +1,5 @@
 AWSTemplateFormatVersion: "2010-09-09"
-
-Description: Creates a CodeCommit repository with approval rules
+Description: Creates a CodeCommit repository with approval rules - update
 
 Parameters:
   RepoName:
