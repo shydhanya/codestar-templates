@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Creates a CodeCommit repository
+
+Parameters:
+  RepoName:
+    Description: "The name of the AWS CodeCommit Repository"
+    Type: String
+    #Default: default-repository-shylu
+
+Resources:
+  rCodeCommit:
+    #DeletionPolicy: Retain
+    Type: AWS::CodeCommit::Repository
+    Properties:
+      RepositoryDescription: Repo demo
+      RepositoryName: !Ref RepoName
